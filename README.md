@@ -1,2 +1,4 @@
 # Arduino-Button
-Button debounce lib for Arduino
+Button debounce libarary for Arduino. <br>
+You need my Arduino Timer libarary for this to work.
+
