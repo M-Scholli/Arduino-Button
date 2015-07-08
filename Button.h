@@ -30,15 +30,17 @@ public:
   button_reset (void);
 private:
   byte _pin;
-  byte _button_press; // button is actual pressed
-  byte _long_pressed; 	// button was pressed long
-  byte _short_pressed;	// button was pressed short
+  byte b_press; 	// button is pressing
   byte long_press; 	// button is pressing long
+  byte long_pressed; 	// button was pressed long
+  byte short_pressed;	// button was pressed short
   byte long_first;
   Timer t1;
+  Timer t2;
   unsigned int _debounce_delay;
   unsigned int _long_delay;
-  boolean button_state;
+  byte button_state_0;
+  byte button_state_1;
 };
 
 #endif /* BUTTON_H_ */
