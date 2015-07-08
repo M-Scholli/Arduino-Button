@@ -62,6 +62,15 @@ Button::check_button_state ()
 }
 
 byte
+Button::button_press (void)
+{
+  byte press;
+  press = long_press;
+  long_press = 0;
+  return press;
+}
+
+byte
 Button::button_pressed_long (void)
 {
   byte pressed;

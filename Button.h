@@ -21,6 +21,8 @@ public:
   void
   check_button_state (void);
   byte
+  button_press (void);
+  byte
   button_pressed_long (void);
   byte
   button_press_long (void);
