@@ -12,7 +12,7 @@
 #define BUTTON_H_
 
 #include "Arduino.h"
-#include "../lib/Timer/Timer.h"
+#include "../Timer/Timer.h"
 
 class Button
 {

@@ -7,7 +7,7 @@
 
 #include "Button.h"
 #include "Arduino.h"
-#include "../lib/Timer/Timer.h"
+#include "../Timer/Timer.h"
 
 Button::Button (byte pin, unsigned int debounce_delay, unsigned int long_delay)
 {
