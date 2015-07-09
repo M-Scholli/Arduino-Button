@@ -39,6 +39,7 @@ Button::check_button_state ()
 	{
 	  t1.restart ();
 	  b_press = 1;
+	  b_hold = 1;
 	}
       else if (button_state_1 == HIGH)
 	{
@@ -51,6 +52,7 @@ Button::check_button_state ()
 	      short_pressed = 1;
 	    }
 	  long_first = 0;
+	  b_hold = 0;
 	}
     }
   if (t1.t_since_start () >= _long_delay && button_state_1 == LOW
@@ -97,6 +99,12 @@ Button::button_pressed_short (void)
   return pressed;
 }
 
+byte
+Button::button_hold (void)
+{
+  return b_hold;
+}
+
 void
 Button::button_reset (void)
 {
@@ -105,6 +113,7 @@ Button::button_reset (void)
   long_pressed = 0;
   short_pressed = 0;
   long_first = 0;
+  b_hold = 0;
   button_state_0 = HIGH;
   button_state_1 = HIGH;
 }

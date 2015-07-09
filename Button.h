@@ -28,6 +28,8 @@ public:
   button_press_long (void);
   byte
   button_pressed_short (void);
+  byte
+  button_hold (void);
   void
   button_reset (void);
 private:
@@ -37,6 +39,7 @@ private:
   byte long_pressed; 	// button was pressed long
   byte short_pressed;	// button was pressed short
   byte long_first;
+  byte b_hold;
   Timer t1;
   Timer t2;
   unsigned int _debounce_delay;
